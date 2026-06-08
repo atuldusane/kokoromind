@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KokoroMind - Premium children's brain development and concentration enhancement program. Build focus, memory, and creative thinking through fun activities.">
+    <meta name="keywords" content="brain development, children, concentration, focus, memory games, cognitive development, kids program">
+    <meta name="author" content="KokoroMind">
+    <meta property="og:title" content="KokoroMind - Brain Development & Concentration for Kids">
+    <meta property="og:description" content="Help your child develop essential cognitive skills through engaging, age-appropriate activities.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kokoromind.in">
+    <title>KokoroMind - Brain Development & Concentration for Kids</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🧠</span>
+                <span class="logo-text">Kokoro<span class="logo-highlight">Mind</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta btn btn-primary">Book Free Trial</a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge animate-fade-up">✨ Premium Brain Development Program</div>
+                <h1 class="hero-title animate-fade-up">Unlock Your Child's <span class="gradient-text">Full Potential</span></h1>
+                <p class="hero-subtitle animate-fade-up">Scientifically designed activities that build concentration, memory, and creative thinking — while kids have the time of their lives!</p>
+                <div class="hero-cta animate-fade-up">
+                    <a href="#contact" class="btn btn-primary btn-lg">
+                        <i class="fas fa-calendar-check"></i> Book a Free Trial Class
+                    </a>
+                    <a href="#programs" class="btn btn-outline btn-lg">
+                        <i class="fas fa-compass"></i> Explore Programs
+                    </a>
+                </div>
+                <div class="hero-stats animate-fade-up">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Happy Kids</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4.9★</span>
+                        <span class="stat-label">Parent Rating</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Activities</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual animate-fade-up">
+                <div class="hero-illustration">
+                    <div class="brain-container">
+                        <div class="brain-glow"></div>
+                        <svg class="brain-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="brainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+                                    <stop offset="50%" style="stop-color:#ec4899;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M200 50c-60 0-110 40-120 95-15 5-30 20-30 45 0 25 15 45 35 50 10 40 50 70 95 75v35h40v-35c45-5 85-35 95-75 20-5 35-25 35-50 0-25-15-40-30-45-10-55-60-95-120-95z" fill="url(#brainGrad)" opacity="0.9"/>
+                            <path d="M200 80c-5 0-5 120-5 120s-40-60-70-40c-20 15 10 50 30 60" fill="none" stroke="white" stroke-width="3" opacity="0.5"/>
+                            <path d="M200 80c5 0 5 120 5 120s40-60 70-40c20 15-10 50-30 60" fill="none" stroke="white" stroke-width="3" opacity="0.5"/>
+                        </svg>
+                        <div class="floating-icon fi-1">🎯</div>
+                        <div class="floating-icon fi-2">💡</div>
+                        <div class="floating-icon fi-3">🧩</div>
+                        <div class="floating-icon fi-4">🎨</div>
+                        <div class="floating-icon fi-5">⭐</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,60 C360,120 720,0 1440,60 L1440,120 L0,120 Z" fill="white"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">About Us</span>
+                <h2 class="section-title">Why <span class="gradient-text">KokoroMind</span>?</h2>
+                <p class="section-subtitle">Where science meets play for extraordinary young minds</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="about-text">At KokoroMind, we help children develop essential cognitive skills through engaging, age-appropriate activities. Our programs are designed to strengthen concentration, attention span, memory, emotional intelligence, and creative thinking while ensuring children have fun learning.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="feature-icon">🧠</div>
+                            <div>
+                                <h4>Brain Development</h4>
+                                <p>Scientifically backed exercises that strengthen neural pathways</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon">🎯</div>
+                            <div>
+                                <h4>Focus Activities</h4>
+                                <p>Fun games that naturally build attention span and concentration</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon">🧩</div>
+                            <div>
+                                <h4>Memory Games</h4>
+                                <p>Interactive puzzles that enhance working and long-term memory</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon">💡</div>
+                            <div>
+                                <h4>Creative Thinking</h4>
+                                <p>Activities that spark imagination and out-of-the-box thinking</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="about-card glass-card">
+                        <div class="about-illustration">
+                            <div class="circle-progress">
+                                <svg viewBox="0 0 200 200">
+                                    <circle cx="100" cy="100" r="85" fill="none" stroke="#e5e7eb" stroke-width="12"/>
+                                    <circle cx="100" cy="100" r="85" fill="none" stroke="url(#progressGrad)" stroke-width="12" stroke-dasharray="534" stroke-dashoffset="107" stroke-linecap="round" transform="rotate(-90 100 100)"/>
+                                    <defs>
+                                        <linearGradient id="progressGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" style="stop-color:#7c3aed"/>
+                                            <stop offset="100%" style="stop-color:#ec4899"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <div class="circle-content">
+                                    <span class="circle-number">80%</span>
+                                    <span class="circle-label">Improvement in Focus</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-card-stats">
+                            <div class="mini-stat">
+                                <span class="mini-stat-icon">📈</span>
+                                <span>95% Parent Satisfaction</span>
+                            </div>
+                            <div class="mini-stat">
+                                <span class="mini-stat-icon">🏆</span>
+                                <span>Award-Winning Curriculum</span>
+                            </div>
+                            <div class="mini-stat">
+                                <span class="mini-stat-icon">👩‍🏫</span>
+                                <span>Certified Trainers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs section" id="programs">
+        <div class="programs-bg"></div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Our Programs</span>
+                <h2 class="section-title">Programs Designed for <span class="gradient-text">Every Age</span></h2>
+                <p class="section-subtitle">Age-appropriate activities that grow with your child</p>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card" data-color="purple">
+                    <div class="program-icon">🌟</div>
+                    <div class="program-age">Ages 3–5</div>
+                    <h3 class="program-title">Little Explorers</h3>
+                    <ul class="program-features">
+                        <li><i class="fas fa-check-circle"></i> Sensory activities</li>
+                        <li><i class="fas fa-check-circle"></i> Brain games</li>
+                        <li><i class="fas fa-check-circle"></i> Early cognitive development</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-program">Learn More →</a>
+                </div>
+                <div class="program-card featured" data-color="pink">
+                    <div class="program-badge">Most Popular</div>
+                    <div class="program-icon">🚀</div>
+                    <div class="program-age">Ages 6–8</div>
+                    <h3 class="program-title">Focus Builders</h3>
+                    <ul class="program-features">
+                        <li><i class="fas fa-check-circle"></i> Attention enhancement</li>
+                        <li><i class="fas fa-check-circle"></i> Memory exercises</li>
+                        <li><i class="fas fa-check-circle"></i> Confidence building</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-program">Learn More →</a>
+                </div>
+                <div class="program-card" data-color="orange">
+                    <div class="program-icon">🧠</div>
+                    <div class="program-age">Ages 9–12</div>
+                    <h3 class="program-title">Smart Thinkers</h3>
+                    <ul class="program-features">
+                        <li><i class="fas fa-check-circle"></i> Problem-solving skills</li>
+                        <li><i class="fas fa-check-circle"></i> Logical reasoning</li>
+                        <li><i class="fas fa-check-circle"></i> Creative challenges</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-program">Learn More →</a>
+                </div>
+                <div class="program-card" data-color="green">
+                    <div class="program-icon">🏋️</div>
+                    <div class="program-age">All Ages</div>
+                    <h3 class="program-title">Brain Gym Workshops</h3>
+                    <ul class="program-features">
+                        <li><i class="fas fa-check-circle"></i> Group activities</li>
+                        <li><i class="fas fa-check-circle"></i> Mindfulness</li>
+                        <li><i class="fas fa-check-circle"></i> Focus improvement sessions</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-program">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works section" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Simple Process</span>
+                <h2 class="section-title">How <span class="gradient-text">It Works</span></h2>
+                <p class="section-subtitle">A simple 4-step journey to unlock your child's potential</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-icon">📋</div>
+                        <h3>Assessment</h3>
+                        <p>We evaluate your child's current cognitive strengths and areas for growth through fun, pressure-free activities.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-icon">📝</div>
+                        <h3>Personalized Learning Plan</h3>
+                        <p>Our experts create a tailored development plan based on your child's unique needs and learning style.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-icon">🎮</div>
+                        <h3>Interactive Activities</h3>
+                        <p>Children engage in exciting brain games, puzzles, and creative exercises that feel like play but build real skills.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-icon">📊</div>
+                        <h3>Track Progress</h3>
+                        <p>Regular reports and assessments show measurable improvement in focus, memory, and cognitive abilities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Testimonials</span>
+                <h2 class="section-title">What <span class="gradient-text">Parents Say</span></h2>
+                <p class="section-subtitle">Real stories from real families</p>
+            </div>
+            <div class="testimonial-carousel">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"My son's concentration improved dramatically within just 2 months. He now focuses better during homework and his teachers have noticed the difference too!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">PS</div>
+                            <div>
+                                <h4>Priya Sharma</h4>
+                                <span>Mother of Aarav, Age 7</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"KokoroMind's approach is unique — my daughter thinks she's playing games, but she's actually building incredible cognitive skills. Best investment we've made!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">RD</div>
+                            <div>
+                                <h4>Rahul Deshmukh</h4>
+                                <span>Father of Ananya, Age 5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"The Brain Gym workshops are fantastic! My kids look forward to every session. Their memory and problem-solving abilities have improved so much."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SM</div>
+                            <div>
+                                <h4>Sneha Mehta</h4>
+                                <span>Mother of Vivaan & Isha, Ages 8 & 10</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"I was skeptical at first, but the results speak for themselves. My child went from struggling to sit still to completing tasks with full attention. Highly recommend!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AK</div>
+                            <div>
+                                <h4>Amit Kulkarni</h4>
+                                <span>Father of Rohan, Age 6</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" id="prevBtn" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+                    <div class="carousel-dots" id="carouselDots"></div>
+                    <button class="carousel-btn next" id="nextBtn" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery section" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Gallery</span>
+                <h2 class="section-title">Learning in <span class="gradient-text">Action</span></h2>
+                <p class="section-subtitle">See our children engaged in brain-building activities</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                        <div class="gallery-icon">🧩</div>
+                        <span>Puzzle Solving</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                        <div class="gallery-icon">🎨</div>
+                        <span>Creative Learning</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                        <div class="gallery-icon">🎲</div>
+                        <span>Brain Games</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">
+                        <div class="gallery-icon">👥</div>
+                        <span>Team Activities</span>
+                    </div>
+                </div>
+                <div class="gallery-item large">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #fa709a, #fee140);">
+                        <div class="gallery-icon">🎯</div>
+                        <span>Focus Exercises</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">FAQ</span>
+                <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+                <p class="section-subtitle">Everything parents want to know</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item glass-card">
+                    <button class="faq-question">
+                        <span>What age group is KokoroMind suitable for?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>KokoroMind programs are designed for children aged 3 to 12 years. We have age-specific programs — Little Explorers (3-5), Focus Builders (6-8), and Smart Thinkers (9-12) — ensuring activities are developmentally appropriate.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <button class="faq-question">
+                        <span>How soon will I see results in my child?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Most parents notice improvements in concentration and attention span within 4-6 weeks of regular sessions. However, every child is different, and our personalized approach ensures steady progress at their own pace.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <button class="faq-question">
+                        <span>Are the activities scientifically backed?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Our curriculum is developed by child psychologists and cognitive development experts. All activities are based on proven neuroscience principles and adapted to be fun and engaging for children.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <button class="faq-question">
+                        <span>What is the class size?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We maintain small batch sizes of 6-8 children per group to ensure personalized attention. This allows our trainers to focus on each child's individual development needs.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <button class="faq-question">
+                        <span>Can I attend a trial class before enrolling?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! We offer a free trial class so you and your child can experience our program firsthand. Book your trial session through our contact form or WhatsApp us directly.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <button class="faq-question">
+                        <span>How are sessions conducted — online or offline?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer both online and offline sessions. Our offline centers provide hands-on experiences, while online sessions use interactive tools to deliver the same quality of engagement from the comfort of your home.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Get in Touch</span>
+                <h2 class="section-title">Book a <span class="gradient-text">Free Trial</span> Class</h2>
+                <p class="section-subtitle">Take the first step towards your child's brighter future</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-form-wrapper glass-card">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="parentName">Parent's Name</label>
+                            <input type="text" id="parentName" name="parentName" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="childName">Child's Name</label>
+                            <input type="text" id="childName" name="childName" placeholder="Your child's name" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="childAge">Child's Age</label>
+                                <select id="childAge" name="childAge" required>
+                                    <option value="">Select age</option>
+                                    <option value="3-5">3-5 years</option>
+                                    <option value="6-8">6-8 years</option>
+                                    <option value="9-12">9-12 years</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message (Optional)</label>
+                            <textarea id="message" name="message" rows="3" placeholder="Any specific concerns or questions..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-full">
+                            <i class="fas fa-paper-plane"></i> Book Free Trial Class
+                        </button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <h4>Call Us</h4>
+                        <p><a href="tel:+919890377829">+91 98903 77829</a></p>
+                        <p><a href="tel:+919270255335">+91 92702 55335</a></p>
+                    </div>
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                        <h4>WhatsApp</h4>
+                        <p><a href="https://wa.me/919890377829" target="_blank">Chat with us</a></p>
+                    </div>
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:info@kokoromind.in">info@kokoromind.in</a></p>
+                    </div>
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+                        <h4>Instagram</h4>
+                        <p><a href="https://instagram.com/koko.ro.mind" target="_blank">@koko.ro.mind</a></p>
+                    </div>
+                    <a href="https://wa.me/919890377829" target="_blank" class="whatsapp-big-btn">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">🧠</span>
+                        <span class="logo-text">Kokoro<span class="logo-highlight">Mind</span></span>
+                    </a>
+                    <p>Empowering young minds through scientifically designed cognitive development programs. Building focus, memory, and creative thinking — one child at a time.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/koko.ro.mind" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919890377829" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="tel:+919890377829" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="#programs">Little Explorers (3-5)</a></li>
+                        <li><a href="#programs">Focus Builders (6-8)</a></li>
+                        <li><a href="#programs">Smart Thinkers (9-12)</a></li>
+                        <li><a href="#programs">Brain Gym Workshops</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+919890377829">+91 98903 77829</a></li>
+                        <li><a href="tel:+919270255335">+91 92702 55335</a></li>
+                        <li><a href="mailto:info@kokoromind.in">info@kokoromind.in</a></li>
+                        <li><a href="https://instagram.com/koko.ro.mind" target="_blank">@koko.ro.mind</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 KokoroMind. All rights reserved.</p>
+                <p>Designed with ❤️ for young minds</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919890377829" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
