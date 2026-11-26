@@ -521,3 +521,10 @@ html{scroll-padding-top:124px}
   .courses .course:hover .pile img{transform:scale(1.04)}
   .courses .course .pile img{transition:transform .5s var(--ease)}
 }
+
+/* real brand icons */
+.badge.wa,.foot .badge.wa{background:#25D366;color:#fff}
+.badge.ig,.foot .badge.ig{background:radial-gradient(circle at 30% 107%,#fdf497 0,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%);color:#fff}
+.badge.ml,.foot .badge.ml{background:#fff;color:inherit;box-shadow:inset 0 0 0 2px var(--line)}
+.foot .badge.ml{box-shadow:none}
+.badge .icon.gm{width:62%;height:auto}
