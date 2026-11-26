@@ -1,6 +1,6 @@
-# KokoroMind design system
+# Kokoromind design system
 
-Derived with ui-ux-pro-max (claymorphism / Baloo 2 recommendation), then fitted to KokoroMind's own art and logo.
+Derived with ui-ux-pro-max (claymorphism / Baloo 2 recommendation), then fitted to Kokoromind's own art and logo.
 Implemented in `assets/css/tokens.css`. Pages must use tokens, not raw hex values.
 
 ## UI style: "the children's exhibition"
