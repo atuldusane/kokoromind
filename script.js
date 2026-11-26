@@ -1,3 +1,4 @@
+document.documentElement.classList.add('js');
 // ===== NAVBAR SCROLL EFFECT =====
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
@@ -15,6 +16,7 @@ const navLinks = document.getElementById('navLinks');
 mobileToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     mobileToggle.classList.toggle('active');
+    mobileToggle.setAttribute('aria-expanded', navLinks.classList.contains('active'));
 });
 
 // Close mobile menu on link click
@@ -22,6 +24,7 @@ navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
         mobileToggle.classList.remove('active');
+        mobileToggle.setAttribute('aria-expanded', 'false');
     });
 });
 
@@ -36,7 +39,9 @@ const totalSlides = testimonialCards.length;
 
 // Create dots
 for (let i = 0; i < totalSlides; i++) {
-    const dot = document.createElement('div');
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.setAttribute('aria-label', `Show testimonial ${i + 1}`);
     dot.classList.add('dot');
     if (i === 0) dot.classList.add('active');
     dot.addEventListener('click', () => goToSlide(i));
@@ -69,14 +74,17 @@ nextBtn.addEventListener('click', nextSlide);
 prevBtn.addEventListener('click', prevSlide);
 
 // Auto-play carousel
-let autoPlay = setInterval(nextSlide, 5000);
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let autoPlay;
+const startAutoPlay = () => { clearInterval(autoPlay); if (!reducedMotion) autoPlay = setInterval(nextSlide, 5000); };
+startAutoPlay();
 
 // Pause on hover
 const carousel = document.querySelector('.testimonial-carousel');
 carousel.addEventListener('mouseenter', () => clearInterval(autoPlay));
-carousel.addEventListener('mouseleave', () => {
-    autoPlay = setInterval(nextSlide, 5000);
-});
+carousel.addEventListener('mouseleave', startAutoPlay);
+carousel.addEventListener('focusin', () => clearInterval(autoPlay));
+carousel.addEventListener('focusout', startAutoPlay);
 
 // ===== FAQ ACCORDION =====
 const faqItems = document.querySelectorAll('.faq-item');
@@ -85,10 +93,11 @@ faqItems.forEach(item => {
     question.addEventListener('click', () => {
         const isActive = item.classList.contains('active');
         // Close all
-        faqItems.forEach(i => i.classList.remove('active'));
+        faqItems.forEach(i => { i.classList.remove('active'); i.querySelector('.faq-question').setAttribute('aria-expanded', 'false'); });
         // Open clicked if it wasn't active
         if (!isActive) {
             item.classList.add('active');
+            question.setAttribute('aria-expanded', 'true');
         }
     });
 });
@@ -125,22 +134,20 @@ contactForm.addEventListener('submit', (e) => {
     const phone = document.getElementById('phone').value;
     const message = document.getElementById('message').value;
     
-    // Create WhatsApp message
-    const whatsappMessage = `Hi KokoroMind! I'd like to book a free trial class.%0A%0AParent: ${parentName}%0AChild: ${childName}%0AAge Group: ${childAge}%0APhone: ${phone}${message ? '%0AMessage: ' + message : ''}`;
+    // Compose an email with the booking details
+    const body = `Hi KokoroMind! I'd like to book a free trial class.\n\nParent: ${parentName}\nChild: ${childName}\nAge Group: ${childAge}\nPhone: ${phone}${message ? '\nMessage: ' + message : ''}`;
+    window.location.href = `mailto:kokoromind.info@gmail.com?subject=${encodeURIComponent('Free trial class')}&body=${encodeURIComponent(body)}`;
     
-    // Open WhatsApp with pre-filled message
-    window.open(`https://wa.me/919890377829?text=${whatsappMessage}`, '_blank');
-    
-    // Show success feedback
+    // Sending happens in the parent's mail app, so never claim it was sent
+    const help = document.getElementById('formHelp');
+    help.hidden = false;
+    help.textContent = 'Press send in your email app to finish. Nothing opened? Write to kokoromind.info@gmail.com.';
     const btn = contactForm.querySelector('button[type="submit"]');
     const originalText = btn.innerHTML;
-    btn.innerHTML = '<i class="fas fa-check"></i> Redirecting to WhatsApp...';
-    btn.style.background = '#25d366';
+    btn.innerHTML = '<i class="fas fa-envelope"></i> Opening your email...';
     
     setTimeout(() => {
         btn.innerHTML = originalText;
-        btn.style.background = '';
-        contactForm.reset();
     }, 3000);
 });
 
@@ -150,7 +157,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
+            target.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth' });
         }
     });
 });
