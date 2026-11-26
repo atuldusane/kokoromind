@@ -454,3 +454,20 @@ html{scroll-padding-top:124px}
 .faq summary .q{flex:1}
 .social .who small{overflow-wrap:normal}
 @media(min-width:1001px){.club{padding-right:clamp(240px,26vw,380px)}}
+
+/* add to phone */
+.install-btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;margin-top:var(--s5);padding:10px 22px;border:2px solid var(--ink);border-radius:var(--r-pill);background:#fff;color:var(--ink);font:700 1.0625rem/1.2 var(--body);cursor:pointer}
+.install-btn[hidden]{display:none}
+.install-btn .icon{width:24px;height:24px}
+@media(hover:hover){.install-btn:hover{background:var(--ink);color:#fff}}
+.foot .install-btn{margin-top:0;border-color:#fff;background:transparent;color:#fff}
+@media(hover:hover){.foot .install-btn:hover{background:#fff;color:var(--ink)}}
+#install-help{border:0;border-radius:24px;padding:0;max-width:min(440px,100% - 32px);color:var(--ink);box-shadow:0 30px 60px -20px rgba(20,33,92,.5)}
+#install-help::backdrop{background:rgba(20,33,92,.55)}
+#install-help .sheet{padding:28px 28px 24px;display:grid;gap:16px;justify-items:start}
+#install-help img{border-radius:16px;box-shadow:0 2px 8px rgba(20,33,92,.18)}
+#install-help h2{font-size:1.7rem}
+#install-help ol{display:grid;gap:12px;padding-left:1.3em;list-style:decimal;font-size:1.05rem;line-height:1.45}
+#install-help .ib{display:inline-grid;place-items:center;min-width:1.6em;height:1.6em;border-radius:6px;background:var(--mist);font-weight:700}
+#install-help .btn{width:100%}
+@media(max-width:760px){.club .install-btn{width:100%;justify-content:center}.foot .install-btn{margin-inline:auto}}
