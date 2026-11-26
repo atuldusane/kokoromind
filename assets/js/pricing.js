@@ -8,7 +8,7 @@
  */
 (() => {
   const PRICES = {
-    in: { label: 'India', cur: 'INR', s: 199, e: 299, f: 799, was: 1500 },
+    in: { label: 'India', cur: 'INR', s: 199, e: 299, f: 799, was: { s: 299, e: 499, f: 1500 } },
     us: { label: 'United States & Americas', cur: 'USD', s: 6.99, e: 10.99, f: 23.99 },
     ca: { label: 'Canada', cur: 'CAD', s: 9.99, e: 14.99, f: 32.99 },
     eu: { label: 'Europe', cur: 'EUR', s: 5.99, e: 8.99, f: 18.99 },
@@ -64,7 +64,8 @@
   const apply = () => {
     const P = PRICES[region];
     document.querySelectorAll('.money[data-p]').forEach((el) => {
-      const v = el.dataset.p === 'w' ? P.was : P[el.dataset.p];
+      const WAS = { ws: 's', we: 'e', w: 'f' };
+      const v = WAS[el.dataset.p] ? P.was && P.was[WAS[el.dataset.p]] : P[el.dataset.p];
       if (v == null) return;
       el.innerHTML = fmt(v / (+el.dataset.div || 1), P.cur, !el.closest('.sr'), !!el.dataset.div);
     });

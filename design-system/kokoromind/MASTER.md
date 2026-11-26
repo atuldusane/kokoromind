@@ -26,10 +26,9 @@ Deviations from the generated recommendation, and why:
 | Highlight | --sun / --sun-soft | #FFC93C / #FFF1C4 |
 | Nature, success | --leaf / --leaf-soft | #1B7F45 / #DDF4E2 |
 | Accent | --grape / --grape-soft | #6A2DB0 / #EDE3FB |
-| WhatsApp action | --whatsapp | #0B7A43 |
 | Error | --danger | #C0262D |
 
-**Courses page uses five only: ink, white, sky, sun, pink.** Pink is for actions and one chart bar. Leaf and grape are homepage-only. Sun never carries white text.
+**Five colour families only: ink, white, sky (incl. tints), sun, pink.** Pink is for the one primary action and one chart bar. Brand icons (WhatsApp, Instagram, email) are drawn in ink, not their brand colours. Leaf and grape are retired. Sun never carries white text.
 
 ## Type
 - Headings: **Baloo 2** 600-800, line-height 1.08, balanced wrapping.
@@ -45,7 +44,7 @@ Deviations from the generated recommendation, and why:
 Flat pill, minimum 52px high (56px on sales pages), 700 weight, no shadow. Hover deepens the fill; press scales to .98. Primary pink, secondary white, community ink. Focus: 3px ink outline (white on dark), 3px offset.
 
 ## Cards
-Radius 28px, no outline, `--lift` shadow or flat tint. Packs are white paper; the Full Course is sun. Artwork tiles are 4:3 on radius 20px.
+Radius 28px, no outline, `--lift` shadow or flat tint. Starter and Explorer are white with a line border and an outlined button; the Full Bundle is sun with the only solid pink button. Three bullets per pack. On phones the Full Bundle comes first. Artwork tiles are 4:3 on radius 20px.
 
 ## Charts
 Order: #CF1468, #2477C9, #1B7F45, #6A2DB0, #965600. Horizontal bars, direct labels, zero baseline. Never rely on colour alone.
@@ -66,3 +65,12 @@ Content is visible without JavaScript.
 - Text below 15px, or text over busy artwork
 - Hover-only information; targets below 44px
 - Rainbow colour on controls: colour belongs to the art
+
+## Motion budget (homepage)
+- Butterflies: 3 on desktop, 2 on phones, one colour, kept to the page edges, fade away from text. Off with reduced motion; a header button turns them off.
+- Carousels: 5 seconds per item, pause on touch, hover, keyboard focus and the pause button.
+- The hero butterfly only hovers; nothing flies across the hero.
+- Headings and text never fade in on scroll.
+
+## Prices
+Regional prices and checkout links live in `assets/js/pricing.js`. Crossed-out prices (India only): Starter ₹299, Explorer ₹499, Full Bundle ₹1,500. Only show a crossed-out price that was genuinely charged.

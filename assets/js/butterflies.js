@@ -4,7 +4,7 @@
   const rand = (a, b) => a + Math.random() * (b - a);
   const go = () => {
     const small = innerWidth < 761;
-    const count = small ? 5 : innerWidth < 1100 ? 7 : 10;
+    const count = small ? 2 : 3;
     const layer = document.createElement('div');
     layer.className = 'flies';
     layer.setAttribute('aria-hidden', 'true');
@@ -12,8 +12,8 @@
     let H = innerHeight;
     // Mostly the side margins, sometimes straight across
     const aim = (f) => {
-      const edge = Math.random() < 0.8;
-      f.tx = edge ? (Math.random() < 0.5 ? rand(-0.02, 0.1) : rand(0.9, 1.02)) * W : rand(0.1, 0.9) * W;
+      const edge = true;
+      f.tx = edge ? (Math.random() < 0.5 ? rand(0.01, 0.07) : rand(0.93, 0.99)) * W : rand(0.1, 0.9) * W;
       f.ty = rand(0.08, 0.95) * H;
       f.until = performance.now() + rand(2600, 6000);
     };
@@ -22,11 +22,11 @@
       el.className = 'fly';
       const s = small ? rand(26, 42) : rand(34, 72);
       el.style.setProperty('--s', `${s.toFixed(0)}px`);
-      el.style.setProperty('--img', `url("${base}fly-${(i % 4) + 1}.webp")`);
-      el.style.setProperty('--f', `${rand(0.2, 0.34).toFixed(2)}s`);
+      el.style.setProperty('--img', `url("${base}fly-1.webp")`);
+      el.style.setProperty('--f', `${rand(0.45, 0.6).toFixed(2)}s`);
       el.innerHTML = '<span class="l"></span><span class="r"></span>';
       layer.append(el);
-      const f = { el, s, x: i % 2 ? -80 : W + 80, y: rand(0, H), vx: 0, vy: 0, a: 0, seed: rand(0, 99), pace: rand(0.8, 1.35) };
+      const f = { el, s, x: i % 2 ? -80 : W + 80, y: rand(0, H), vx: 0, vy: 0, a: 0, seed: rand(0, 99), pace: rand(0.45, 0.65) };
       aim(f);
       return f;
     });
@@ -34,10 +34,9 @@
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'fly-btn';
-    btn.innerHTML = `<img src="${base}fly-1.webp" width="180" height="176" alt="">`;
-    const bar = document.querySelector('.top .wrap, .nav-container');
-    const last = bar && bar.lastElementChild;
-    if (bar) bar.insertBefore(btn, last); else document.body.append(btn);
+    btn.innerHTML = `<img src="${base}fly-1.webp" width="180" height="176" alt=""><span>Flying butterflies: <b>On</b></span>`;
+    const bar = document.querySelector('.foot .legal, .footer-bottom');
+    if (bar) bar.append(btn); else document.body.append(btn);
 
     let on = true;
     try { on = localStorage.getItem('butterflies') !== 'off'; } catch (e) { /* storage blocked */ }
@@ -66,8 +65,8 @@
         if (now > f.until || Math.hypot(f.tx - f.x, f.ty - f.y) < 50) aim(f);
         const d = Math.hypot(f.tx - f.x, f.ty - f.y) || 1;
         const pull = 150 * f.pace;
-        let ax = ((f.tx - f.x) / d) * pull + Math.sin(now / 420 + f.seed) * 150;
-        let ay = ((f.ty - f.y) / d) * pull + Math.cos(now / 310 + f.seed * 2) * 190;
+        let ax = ((f.tx - f.x) / d) * pull + Math.sin(now / 900 + f.seed) * 70;
+        let ay = ((f.ty - f.y) / d) * pull + Math.cos(now / 700 + f.seed * 2) * 90;
         const mx = f.x - mouse.x;
         const my = f.y - mouse.y;
         const md = Math.hypot(mx, my) || 1;
@@ -91,7 +90,7 @@
       layer.style.display = on ? '' : 'none';
       btn.classList.toggle('off', !on);
       btn.setAttribute('aria-pressed', String(on));
-      btn.setAttribute('aria-label', 'Flying butterflies');
+      btn.querySelector('b').textContent = on ? 'On' : 'Off';
       if (on && !document.hidden && !raf) { prev = performance.now(); lastY = scrollY; raf = requestAnimationFrame(frame); }
     };
     btn.addEventListener('click', () => {
