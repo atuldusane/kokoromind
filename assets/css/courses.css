@@ -462,23 +462,12 @@ html{scroll-padding-top:124px}
 /* colour: navy, white, sky, yellow, pink */
 .badge.wa,.badge.ig,.badge.ml{background:var(--ink);color:#fff}
 .foot .badge.wa,.foot .badge.ig,.foot .badge.ml{background:#fff;color:var(--ink)}
-.course:not(.big){background:#fff;box-shadow:inset 0 0 0 2px var(--line)}
-/* hierarchy: Full Bundle is the one solid action */
-.course .btn.line{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
-@media(hover:hover){.course .btn.line:hover{background:var(--ink);color:#fff}}
 .inc{gap:10px}
 /* hero: short headline */
 .hero h1{font-size:clamp(3.2rem,1.4rem + 6vw,6.4rem);line-height:.95;letter-spacing:-.03em}
 .hero h1 em{font-style:normal;color:var(--pink)}
 .hero-copy>p:not(.kicker){font-size:clamp(1.15rem,1rem + .5vw,1.4rem);max-width:26rem}
-/* phone: Full Bundle first and largest */
-@media(max-width:760px){
-  .courses .course.big{order:-1;padding:24px}
-  .courses .course.big .amt{font-size:4rem}
-  .courses .course:not(.big) .pile{display:none}
-  .courses .course:not(.big) .cbody{padding-top:4px}
-  .hero h1{font-size:clamp(3rem,15vw,4.4rem)}
-}
+@media(max-width:760px){.hero h1{font-size:clamp(3rem,15vw,4.4rem)}}
 
 /* policy links */
 .note a{color:var(--ink);font-weight:600}
@@ -522,30 +511,13 @@ html{scroll-padding-top:124px}
 .kicker .kick-text{white-space:nowrap}
 @media(max-width:760px){.hero-copy>.kicker{flex-direction:column;align-items:flex-start}.kicker .kick-text{font-size:min(1.0625rem,4.6vw)}}
 
-/* ===== packs: one hero offer, two quiet options ===== */
-.courses{grid-template-columns:1fr 1fr!important;gap:0 var(--s7)!important;align-items:start!important}
-.courses .course.big{grid-column:1/-1;display:grid;grid-template-columns:1.05fr 1fr;gap:var(--s6);align-items:center;padding:var(--s6);margin:0!important;border-radius:28px}
-.courses .course.big .pile-box{min-height:0}
-.courses .course.big .pile{aspect-ratio:4/3!important;height:auto!important;grid-template:repeat(3,1fr)/repeat(4,1fr)!important;border-radius:16px}
-.courses .course.big .cbody{padding:0}
-.courses .course.big h3{font-size:clamp(2rem,1.5rem + 1.6vw,2.8rem)}
-.courses .course.big .amt{font-size:clamp(3.4rem,2.6rem + 2.4vw,4.6rem)}
-.try{grid-column:1/-1;margin:clamp(48px,6vw,72px) 0 var(--s4);font:700 clamp(1.4rem,1.1rem + 1vw,1.8rem)/1.2 var(--head);letter-spacing:-.01em}
-.courses .course:not(.big){display:block;background:none!important;box-shadow:none!important;border-radius:0;padding:var(--s5) 0 0;border-top:2px solid var(--ink)}
-.courses .course:not(.big) .pile{display:none!important}
-.courses .course:not(.big) .cbody{padding:0}
-.courses .course:not(.big) h3{font-size:1.6rem}
-.courses .course:not(.big) .price{margin-top:var(--s2)}
-.courses .course:not(.big) .amt{font-size:2.6rem}
-.courses .course:not(.big) .inc{margin:var(--s3) 0 var(--s4);flex:none}
-.courses .course:not(.big) .btn{width:auto}
-@media(max-width:760px){
-  .courses{display:grid!important;grid-template-columns:1fr!important;gap:0!important}
-  .courses .course.big{grid-template-columns:1fr;gap:var(--s5);padding:20px}
-  .courses .course.big .btn{width:100%}
-  .courses .course:not(.big){padding-bottom:var(--s6)}
-  .courses .course:not(.big) .btn{width:100%}
-  .try{margin-top:var(--s7)}
-}
 /* ===== phone hero: shorter picture so the packs come sooner ===== */
 @media(max-width:760px){.hero-art{aspect-ratio:740/430!important;max-height:none!important}.hero-art img{object-position:center 35%}}
+
+/* pack cards pop up on hover (mouse only), and on keyboard focus */
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+  .courses .course{transition:transform .35s cubic-bezier(.3,1.4,.5,1),box-shadow .35s var(--ease)}
+  .courses .course:hover,.courses .course:focus-within{transform:translateY(-10px) scale(1.02);box-shadow:0 28px 50px -22px rgba(20,33,92,.45);z-index:2}
+  .courses .course:hover .pile img{transform:scale(1.04)}
+  .courses .course .pile img{transition:transform .5s var(--ease)}
+}
