@@ -255,3 +255,19 @@
   new IntersectionObserver((es) => { boxOn = es[0].isIntersecting; sync(); }).observe(studio);
   setInterval(() => { if (boxOn && !document.hidden) sync(); }, 400);
 })();
+
+// Sample lesson: load the YouTube player only when the parent presses play
+(() => {
+  const a = document.querySelector('.yt-play');
+  if (!a) return;
+  a.addEventListener('click', (e) => {
+    e.preventDefault();
+    const f = document.createElement('iframe');
+    f.src = `https://www.youtube-nocookie.com/embed/${a.dataset.id}?autoplay=1&rel=0&playsinline=1`;
+    f.title = 'Sample lesson | Kokoromind Level 1 (Ages 4–10)';
+    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.allowFullscreen = true;
+    a.replaceWith(f);
+    f.focus();
+  });
+})();
